@@ -88,7 +88,7 @@ namespace Content.Server.GameObjects.Components.Interactable
 
         public override void ExposeData(ObjectSerializer serializer)
         {
-            serializer.DataField(this, collection => WeldSoundCollection, "weldSoundCollection", string.Empty);
+            serializer.DataField(this, collection => collection.WeldSoundCollection, "weldSoundCollection", string.Empty);
         }
 
         public override ComponentState GetComponentState()

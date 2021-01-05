@@ -86,9 +86,9 @@ namespace Content.Server.GameObjects.Components.Interactable
                     return qualities;
                 });
 
-            serializer.DataField(this, mod => SpeedModifier, "speed", 1);
-            serializer.DataField(this, use => UseSound, "useSound", string.Empty);
-            serializer.DataField(this, collection => UseSoundCollection, "useSoundCollection", string.Empty);
+            serializer.DataField(this, mod => mod.SpeedModifier, "speed", 1);
+            serializer.DataField(this, use => use.UseSound, "useSound", string.Empty);
+            serializer.DataField(this, collection => collection.UseSoundCollection, "useSoundCollection", string.Empty);
         }
 
         public virtual async Task<bool> UseTool(IEntity user, IEntity target, float doAfterDelay, ToolQuality toolQualityNeeded, Func<bool> doAfterCheck = null)
